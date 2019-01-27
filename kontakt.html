@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tomasz Michalski" />
+    <meta name="description" content="Strona poświecona rozwojowi osobistemu" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/functions.js"></script>
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+    <title>Psychologia codzienna - Kontakt</title>
+</head>
+<body onload="load()">
+    <div id="container">
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo" style="float:left" />
+                Psychologia Codzienna
+                <div style="clear:both"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <ol>
+                <li><a href="index.html">Strona Główna</a></li>
+                <li>
+                    <a href="#" style="cursor:default">Przedsiębiorczość</a>
+                    <ul>
+                        <li><a href="milion.html">Zarobić milion</a></li>
+                        <li><a href="bogaty.html">Bogaty albo biedny</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" style="cursor:default">Wpływ i relacje</a>
+                    <ul>
+                        <li><a href="przyjaciel.html">Zdobyć przyjaciół</a></li>
+                        <li><a href="wplyw.html">Wywieranie wpływu</a></li>
+                    </ul>
+                </li>
+                <li><a href="zrodla.html">Źródła</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ol>
+        </div>
+        <div class="content">
+            <h1 class="animacja">Skontaktuj się z nami!</h1>
+            <form action="mailto:psychologia@codzienna.pl" id="form" novalidate>
+                <fieldset id="fieldset">
+                    <legend>Formularz kontaktowy</legend>
+                    Wyślij email na <i>psychologia@codzienna.pl</i>:<br />
+                    <input type="text" placeholder="Imię" id="imie"/>
+                    <input type="text" placeholder="Nazwisko" id="nazwisko" /><br />
+                    <label class="hint" for="email"></label>
+                    <input type="email" title="Nie będziemy Ci wysyłać reklam" placeholder="Email" id="email"/>
+                    <input type="text" placeholder="Numer telefonu" id="numer"/><br /><br />
+                    Czego dotyczy wiadomość?
+                    <select>
+                        <option value="Pytanie do książki">Pytanie do książki</option>
+                        <option value="Błąd na stronie">Błąd na stronie</option>
+                        <option value="Sugestia nowej zawartości">Sugestia nowej zawartości</option>
+                        <option value="Inne">Inne</option>
+                    </select><br /><br />
+                    Czy masz ukończone 18 lat?
+                    <label for="radio-1">Tak</label>
+                    <input type="radio" name="pelnoletnosc" id="radio-1" value="tak" />
+                    <label for="radio-2">Nie</label>
+                    <input type="radio" name="pelnoletnosc" id="radio-2" value="nie" checked/><br />
+                    <textarea id="text" placeholder="Treść wiadomości"></textarea><br />
+                    <input type="submit" value="Wyślij" onclick="store(); send()" id="submit"/>
+                    <input type="reset" value="Wyczyść" onclick="add()" />
+                </fieldset>
+            </form>
+            <div id="send" class="send">
+                <span id="thanks">Dziękujemy za kontakt!</span>
+                <button id="new" onclick="another()">Nowa wiadomość</button>
+            </div>
+        </div>
+        <div class="footer">Psychologia codzienna &copy; 2017 W razie pytań i sugestii zapraszamy do <a href="kontakt.html">kontaktu</a>!</div>
+    </div>
+
+</body>
+</html>
